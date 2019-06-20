@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>app.phompang.android-resource-deprecater</id>
+    <name>Android Resource Deprecater</name>
+    <vendor email="pichai.sivawat@gmail.com" url="https://github.com/phompang">PhompAng</vendor>
+
+    <description><![CDATA[
+        <p>Mark deprecated the Android resources</p>
+        <p>Only support XML Attribute for now.</p>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <annotator language="XML" implementationClass="XmlAnnotator"/>
+        <projectService serviceImplementation="DeprecatedResourceConfig"/>
+        <projectConfigurable instance="ui.ConfigPanel"/>
+    </extensions>
+</idea-plugin>
