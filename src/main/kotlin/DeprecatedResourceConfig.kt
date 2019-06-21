@@ -1,3 +1,4 @@
+
 import com.intellij.openapi.components.PersistentStateComponent
 import com.intellij.openapi.components.ServiceManager
 import com.intellij.openapi.components.State
@@ -12,8 +13,8 @@ class DeprecatedResourceConfig : PersistentStateComponent<Element> {
     companion object {
         private const val DEPRECATED_LIST_TAG = "list"
         private const val DEPRECATED_TYPE_TAG = "type"
-        private const val DEPRECATED_TYPE_TAG_ATTR = "type"
-        private const val DEPRECATED_TAG = "deprecated"
+        private const val DEPRECATED_TYPE_TAG_ATTR = "name"
+        private const val DEPRECATED_TAG = "resource"
 
         fun getInstance(project: Project): DeprecatedResourceConfig {
             return ServiceManager.getService(project, DeprecatedResourceConfig::class.java)
