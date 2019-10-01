@@ -35,8 +35,7 @@ val publishPlugin: PublishTask by tasks
 val patchPluginXml: PatchPluginXmlTask by tasks
 
 publishPlugin {
-    username(project.findProperty("INTELLIJ_USER_NAME"))
-    password(project.findProperty("INTELLIJ_PASSWORD"))
+    token(project.findProperty("INTELLIJ_TOKEN"))
 }
 
 patchPluginXml {
