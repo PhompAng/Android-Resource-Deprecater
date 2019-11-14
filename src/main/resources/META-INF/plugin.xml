@@ -12,7 +12,7 @@
          on how to target different products -->
 <!--    <depends>com.intellij.modules.lang</depends>-->
     <depends>com.intellij.modules.java</depends>
-    <idea-version since-build="192.*" />
+    <idea-version since-build="191.*" until-build="192.*" />
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
